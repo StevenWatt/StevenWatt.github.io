@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven Sun (孙佑平) | Robotics Engineer &amp; ML Researcher</title>
+
+    <!-- 基础 SEO -->
+    <meta name="description" content="Steven Sun (孙佑平) — Robotics Engineering undergraduate at Shandong University, ML researcher on sEMG-based gait analysis. Incoming MS in Computer Engineering at Northwestern University (Sep 2026).">
+    <meta name="author" content="Steven Sun (Sun Youping, 孙佑平)">
+    <meta name="keywords" content="Steven Sun, Sun Youping, 孙佑平, Robotics Engineer, Machine Learning Researcher, sEMG, Gait Analysis, Neural Networks, Northwestern University, Shandong University, University of Wisconsin-Madison, Computer Engineering">
+    <link rel="canonical" href="./index.html">
+
+    <!-- Open Graph (Facebook, LinkedIn, WeChat etc.) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Steven Sun | Robotics Engineer &amp; ML Researcher">
+    <meta property="og:description" content="Robotics Engineering undergraduate at Shandong University, ML researcher on sEMG-based gait analysis. Incoming MS at Northwestern University.">
+    <meta property="og:image" content="myPhoto.jpeg">
+    <meta property="profile:first_name" content="Steven">
+    <meta property="profile:last_name" content="Sun">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Steven Sun | Robotics Engineer &amp; ML Researcher">
+    <meta name="twitter:description" content="Robotics &amp; ML researcher. Incoming MS at Northwestern University.">
+    <meta name="twitter:image" content="myPhoto.jpeg">
+
+    <!-- Structured Data: Person schema, helps Google understand this is a personal page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Steven Sun",
+      "alternateName": ["Sun Youping", "孙佑平"],
+      "jobTitle": "Robotics Engineer & ML Researcher",
+      "email": "mailto:sunuping1@gmail.com",
+      "image": "myPhoto.jpeg",
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Shandong University", "url": "https://www.sdu.edu.cn" },
+        { "@type": "CollegeOrUniversity", "name": "University of Wisconsin–Madison", "url": "https://www.wisc.edu" }
+      ],
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Northwestern University",
+        "url": "https://www.northwestern.edu"
+      },
+      "knowsAbout": [
+        "Robotics",
+        "Machine Learning",
+        "sEMG Signal Processing",
+        "Gait Phase Detection",
+        "Neural Networks",
+        "Human-Robot Interaction",
+        "Motion Planning"
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --text:    #212529;
+            --muted:   #6c757d;
+            --light:   #adb5bd;
+            --border:  #dee2e6;
+            --bg:      #ffffff;
+            --bg-alt:  #f8f9fa;
+            --link:    #0a6fc2;
+            --award:   #b73300;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { font-weight: 500; }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        /* ===== NAV ===== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2.5rem;
+        }
+
+        .nav-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-brand:hover { text-decoration: none; color: var(--text); }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.8rem;
+        }
+
+        .nav-links a {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--link); text-decoration: none; }
+
+        /* ===== PAGE ===== */
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== SECTION ===== */
+        .section {
+            padding: 3.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:last-child { border-bottom: none; }
+
+        .section-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--text);
+            display: inline-block;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-layout {
+            display: grid;
+            grid-template-columns: 210px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-col { text-align: center; }
+
+        .avatar {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background: var(--bg-alt);
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--light);
+            margin: 0 auto 1rem;
+            overflow: hidden;
+        }
+
+        .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+        .profile-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .profile-sub {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 0.15rem;
+        }
+
+        .profile-links {
+            list-style: none;
+            margin-top: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            align-items: center;
+        }
+
+        .profile-links a {
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--muted);
+        }
+
+        .profile-links a:hover { color: var(--link); text-decoration: none; }
+
+        .bio-col p { margin-bottom: 0.9rem; }
+        .bio-col p:last-child { margin-bottom: 0; }
+
+        /* ===== TIMELINE (shared by Education & Research) ===== */
+        .tl-wrap {
+            position: relative;
+            padding-left: 2.2rem;
+        }
+
+        .tl-wrap::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 0.6rem;
+            bottom: 1rem;
+            width: 1px;
+            background: var(--border);
+        }
+
+        .tl-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .tl-item:last-child { margin-bottom: 0; }
+
+        .tl-item::before {
+            content: '';
+            position: absolute;
+            left: -2.2rem;
+            top: 0.55rem;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--link);
+            transform: translateX(-4px);
+        }
+
+        .tl-date {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 0.2rem;
+        }
+
+        .tl-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.98rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .tl-sub {
+            color: var(--muted);
+            font-size: 0.88rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.1rem 0.55rem;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            border-radius: 2px;
+        }
+
+        /* ===== RESEARCH (extends timeline) ===== */
+        .research-topic {
+            font-style: italic;
+            color: var(--text);
+            font-size: 0.92rem;
+            margin: 0.3rem 0 0.6rem;
+        }
+
+        .research-bullets {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        .research-bullets li {
+            position: relative;
+            padding-left: 1rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.35rem;
+            line-height: 1.65;
+        }
+
+        .research-bullets li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            top: 0.1em;
+            color: var(--link);
+            font-size: 0.75rem;
+        }
+
+        /* ===== NEWS ===== */
+        .news-list { list-style: none; }
+
+        .news-list li {
+            padding: 0.55rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .news-list li:last-child { border-bottom: none; }
+
+        .news-tag {
+            font-weight: 500;
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+        }
+
+        /* ===== PUBLICATIONS ===== */
+        .year-group { margin-bottom: 2.5rem; }
+        .year-group:last-child { margin-bottom: 0; }
+
+        .year-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--muted);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pub-entry {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .pub-entry:hover { border-left-color: var(--link); }
+        .pub-entry:last-child { margin-bottom: 0; }
+        .pub-body { flex: 1; }
+
+        .pub-title {
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.15rem;
+            line-height: 1.4;
+        }
+
+        .pub-authors {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .pub-meta {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .pub-badge {
+            font-size: 0.78rem;
+            padding: 0.1rem 0.5rem;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            border-radius: 2px;
+        }
+
+        .pub-badge.accepted { border-color: #28a745; color: #28a745; }
+
+        /* ===== PROJECTS & ACTIVITIES ===== */
+        .project-entry {
+            margin-bottom: 1.75rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid var(--border);
+            transition: border-color 0.2s;
+        }
+
+        .project-entry:hover { border-left-color: var(--link); }
+        .project-entry:last-child { margin-bottom: 0; }
+
+        .project-title { font-weight: 500; color: var(--text); margin-bottom: 0.15rem; }
+
+        .project-meta {
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+
+        .project-award {
+            font-weight: 600;
+            color: var(--award);
+            font-size: 0.85rem;
+        }
+
+        .project-desc {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-top: 0.3rem;
+            line-height: 1.65;
+        }
+
+        /* ===== AWARDS ===== */
+        .award-list {
+            list-style: none;
+            border-top: 1px solid var(--border);
+        }
+
+        .award-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 0.65rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .award-text { flex: 1; }
+
+        .award-year {
+            color: var(--muted);
+            font-size: 0.85rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .award-highlight { font-weight: 500; }
+
+        /* ===== SKILLS ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .skill-group-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            margin-bottom: 0.6rem;
+        }
+
+        .skill-group-body {
+            font-size: 0.92rem;
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-block { font-size: 0.95rem; line-height: 2; }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .contact-icon { font-size: 1rem; color: var(--muted); }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 1.75rem 2rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 780px) {
+            .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+            .profile-col { text-align: left; display: flex; gap: 1.5rem; align-items: flex-start; }
+            .profile-links { align-items: flex-start; }
+            nav { padding: 0 1.25rem; }
+            .page { padding: 0 1.25rem; }
+            .nav-links { gap: 1rem; }
+            .section { padding: 2.5rem 0; }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links li:nth-child(n+5) { display: none; }
+            .award-list li { flex-direction: column; gap: 0.1rem; }
+        }
+
+        @media (max-width: 420px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="#about" class="nav-brand">Steven Sun</a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="page">
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="about-layout">
+            <div class="profile-col">
+                <div class="avatar"><img src="myPhoto.jpeg" alt="Steven Sun"></div>
+                <div>
+                    <div class="profile-name">Steven Sun</div>
+                    <div class="profile-sub">孙佑平</div>
+                    <div class="profile-sub">Robotics Engineering</div>
+                    <div class="profile-sub">Shandong University</div>
+                    <ul class="profile-links">
+                        <li>
+                            <a href="mailto:sunuping1@gmail.com">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                sunuping1@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com" target="_blank" rel="noopener">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                                Google Scholar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bio-col">
+                <p>I am a final-year undergraduate in <strong>Robotics Engineering</strong> at <a href="https://www.sdu.edu.cn" target="_blank" rel="noopener">Shandong University</a>, College of Control Science and Engineering, passionate about the intersection of machine learning, control systems, and human–robot interaction. In September 2026, I will begin my <strong>MS in Computer Engineering</strong> at <a href="https://www.northwestern.edu" target="_blank" rel="noopener">Northwestern University</a>.</p>
+                <p>My research focuses on machine learning-based human gait analysis — specifically, detecting and predicting gait phases from surface electromyography (sEMG) signals using artificial neural networks. I have published three papers at international conferences and received national and provincial awards in robotics competitions.</p>
+                <p>I spent Fall 2025 as an exchange student at the <a href="https://www.wisc.edu" target="_blank" rel="noopener">University of Wisconsin–Madison</a> (GPA: 4.0 / 4.0), where I worked in the Flexible Electronics &amp; Additive Printing Lab on electrohydrodynamic (EHD) printing.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+        <h2 class="section-heading">Education</h2>
+        <div class="tl-wrap">
+            <div class="tl-item">
+                <div class="tl-date">Sep 2026 – May 2028 (Expected)</div>
+                <div class="tl-title">Northwestern University</div>
+                <div class="tl-sub">MS Computer Engineering · Evanston, IL</div>
+                <span class="badge">Graduate Admit</span>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">Sep 2025 – Dec 2025</div>
+                <div class="tl-title">University of Wisconsin–Madison</div>
+                <div class="tl-sub">Exchange Student · Industrial &amp; Systems Engineering · Madison, WI</div>
+                <span class="badge">GPA 4.0 / 4.0</span>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">Sep 2022 – Jun 2026 (Expected)</div>
+                <div class="tl-title">Shandong University</div>
+                <div class="tl-sub">BS Robotics Engineering · College of Control Science and Engineering · Jinan, China</div>
+                <span class="badge">GPA 83.99 / 100</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RESEARCH EXPERIENCE -->
+    <section class="section" id="research">
+        <h2 class="section-heading">Research Experience</h2>
+        <div class="tl-wrap">
+            <div class="tl-item">
+                <div class="tl-date">Oct 2024 – Present</div>
+                <div class="tl-title">Robotics Center, Shandong University</div>
+                <div class="tl-sub">Research Assistant · Prof. Zhang Huanghe (张黄河)</div>
+                <div class="research-topic">Gait Phase Detection &amp; Prediction with Machine Learning on sEMG Signals</div>
+                <ul class="research-bullets"><li>Analyzed lower-limb surface EMG signals and built a complete gait phase detection and prediction data processing pipeline.</li><li>Cleaned and preprocessed raw EMG data, extracted features, and trained ANN models for multi-class gait phase classification.</li><li>Investigated and significantly improved model generalization across different locomotion patterns (level walking and stair ambulation).</li></ul>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">Sep 2025 – Dec 2025</div>
+                <div class="tl-title">Flexible Electronics &amp; Additive Printing Lab, UW–Madison</div>
+                <div class="tl-sub">Research Assistant · Prof. Hantang Qin</div>
+                <div class="research-topic">EHD Printing — 3D Model Building, Scanning &amp; Pattern Projection</div>
+                <ul class="research-bullets"><li>Designed continuously curving 3D models in SolidWorks and completed high-precision 3D scanning at 0.10 mm accuracy.</li><li>Mapped 2D patterns onto irregular 3D surfaces in Blender; resampled machining trajectories to maintain 1 mm point spacing for precise EHD-printing control.</li></ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="section" id="news">
+        <h2 class="section-heading">News</h2>
+        <ul class="news-list">
+            <li><span class="news-tag">[Apr 2026]</span> Our paper &quot;Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction&quot; has been accepted to <strong>ICCA 2026</strong>.</li>
+            <li><span class="news-tag">[2026]</span> Paper &quot;Cross-Locomotion Task Generalization in sEMG-Based Gait Phase Prediction Using ANNs&quot; accepted to <strong>AIACT 2026</strong>.</li>
+            <li><span class="news-tag">[Nov 2025]</span> Our team received the <strong>National 2nd Prize</strong> at the 19th &quot;Challenge Cup&quot; AI+ Special Competition.</li>
+            <li><span class="news-tag">[Sep 2025]</span> Started exchange semester at University of Wisconsin–Madison, Department of Industrial &amp; Systems Engineering.</li>
+            <li><span class="news-tag">[2024]</span> Paper &quot;Gait Phase Detection and Prediction with Machine Learning Models Based on sEMG&quot; published at <strong>AIHCIR 2024</strong>.</li>
+            <li><span class="news-tag">[Aug 2024]</span> Received <strong>Provincial 1st Prize</strong> at the 19th National Intelligent Vehicle Competition (iFLYTEK Track).</li>
+        </ul>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications">
+        <h2 class="section-heading">Publications</h2>
+        <div class="year-group">
+            <div class="year-label">2026</div>
+            <div class="pub-entry"><div class="pub-body"><div class="pub-title">"Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction"</div><div class="pub-authors"><strong>Sun, Y.</strong>, et al.</div><div class="pub-venue">ICCA 2026 — International Conference on Control and Automation</div><div class="pub-meta"><span class="pub-badge accepted">Accepted</span></div></div></div>
+            <div class="pub-entry"><div class="pub-body"><div class="pub-title">"Cross-Locomotion Task Generalization in sEMG-Based Gait Phase Prediction Using Artificial Neural Networks"</div><div class="pub-authors"><strong>Sun, Y.</strong>, et al.</div><div class="pub-venue">AIACT 2026 — Artificial Intelligence and Computer Technology</div></div></div>
+        </div>
+        <div class="year-group">
+            <div class="year-label">2024</div>
+            <div class="pub-entry"><div class="pub-body"><div class="pub-title">"Gait Phase Detection and Prediction with Machine Learning Models Based on sEMG"</div><div class="pub-authors"><strong>Sun, Y.</strong>, &amp; Wang, J.</div><div class="pub-venue">AIHCIR 2024 — AI in Human-Computer Interaction Research</div></div></div>
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <h2 class="section-heading">Projects</h2>
+        <div class="project-entry"><div class="project-title">Humanoid Robot Control for Warehouse Scenarios</div><div class="project-meta">19th &quot;Challenge Cup&quot; AI+ Special Competition &nbsp;·&nbsp; Jul 2025 – Nov 2025</div><div class="project-award">★ National 2nd Prize</div><div class="project-desc">Built a Docker-based simulation environment and developed upper-level control algorithms enabling a humanoid robot&#x27;s dexterous hand to perform object grasping and mobile manipulation planning for warehouse logistics tasks.</div></div>
+        <div class="project-entry"><div class="project-title">Intelligent Quadruped Robot — Webots Simulation &amp; Motion Control</div><div class="project-meta">Intelligent Robotics Course Practice &nbsp;·&nbsp; Feb 2025 – Mar 2025</div><div class="project-desc">Implemented stair-climbing pose transformation and motion control in an Ubuntu + Webots environment. Designed LiDAR- and camera-fused line-tracking and obstacle avoidance algorithms achieving high-speed stable navigation.</div></div>
+        <div class="project-entry"><div class="project-title">Visual Recognition &amp; Vehicle Motion Control Algorithm</div><div class="project-meta">19th National Intelligent Vehicle Competition · iFLYTEK Track &nbsp;·&nbsp; Sep 2023 – Aug 2024</div><div class="project-award">★ Provincial 1st Prize</div><div class="project-desc">Developed OpenCV-based track recognition with curve-type classification and adaptive steering control. Integrated ROS with PID control algorithms to achieve high-speed, stable navigation across varied track configurations.</div></div>
+
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section" id="awards">
+        <h2 class="section-heading">Awards &amp; Honors</h2>
+        <ul class="award-list">
+            <li><span class="award-text award-highlight">National 2nd Prize — 19th &quot;Challenge Cup&quot; AI+ Special Competition</span><span class="award-year">2025</span></li>
+            <li><span class="award-text award-highlight">Provincial 1st Prize — 19th National Intelligent Vehicle Competition (iFLYTEK Track)</span><span class="award-year">2024</span></li>
+            <li><span class="award-text">Outstanding Innovation &amp; Entrepreneurship Individual, Shandong University</span><span class="award-year">2023</span></li>
+            <li><span class="award-text">Entrepreneurship Practice Scholarship, Shandong University</span><span class="award-year">2023</span></li>
+            <li><span class="award-text">Advanced Individual in Freshman Volunteer Service, Shandong University</span><span class="award-year">2023</span></li>
+            <li><span class="award-text">Outstanding Communist Youth League Member, Shandong University</span><span class="award-year">2022, 2023</span></li>
+            <li><span class="award-text">Advanced Individual in Social Practice, Shandong University</span><span class="award-year">2022</span></li>
+            <li><span class="award-text">School-level Outstanding Class Cadre, Shandong University</span><span class="award-year">2022</span></li>
+        </ul>
+    </section>
+
+    <!-- STUDENT ACTIVITIES -->
+    <section class="section" id="activities">
+        <h2 class="section-heading">Student Activities</h2>
+        <div class="project-entry"><div class="project-title">Director, Social Practice Management Center</div><div class="project-meta">Sep 2023 – Jun 2024</div><div class="project-desc">Organized enterprise study-tour activities with Qingdao TGOOD, Shandong Lingong, and Jinan Bosch; coordinated winter and summer break social practice programs and evaluations; hosted &quot;Return from Practice, Share Your Growth&quot; experience-sharing sessions.</div></div>
+        <div class="project-entry"><div class="project-title">Freshman Class Representative</div><div class="project-meta">Sep 2023 – Feb 2024</div><div class="project-desc">Organized freshmen military training and campus orientation activities; supported freshmen in joining student clubs and organizations; coordinated freshman class cadre selection.</div></div>
+        <div class="project-entry"><div class="project-title">Class Youth League Secretary</div><div class="project-meta">Sep 2022 – Jun 2023</div><div class="project-desc">Organized class-level Communist Youth League branch activities; managed the Youth League branch management system; coordinated class participation in college- and university-wide events.</div></div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <h2 class="section-heading">Skills</h2>
+        <div class="skills-grid">
+            <div><div class="skill-group-title">Programming</div><div class="skill-group-body">Python, C/C++, R, MATLAB, Wolfram</div></div>
+            <div><div class="skill-group-title">Tools &amp; Frameworks</div><div class="skill-group-body">ROS, OpenCV, Webots, Docker, SolidWorks, Blender, Tableau</div></div>
+            <div><div class="skill-group-title">Mathematics</div><div class="skill-group-body">Advanced Calculus, Linear Algebra, Probability &amp; Statistics, Complex Analysis</div></div>
+            <div><div class="skill-group-title">Languages</div><div class="skill-group-body">English (TOEFL 99), Chinese (Native)</div></div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <h2 class="section-heading">Contact</h2>
+        <div class="contact-block">
+            <div class="contact-row"><span class="contact-icon">✉</span><a href="mailto:sunuping1@gmail.com">sunuping1@gmail.com</a></div>
+            <div class="contact-row"><span class="contact-icon">📞</span><span>+86 185 6192 9927</span></div>
+            <div class="contact-row"><span class="contact-icon">📍</span><span>College of Control Science and Engineering, Shandong University, Jinan, China</span></div>
+            <div class="contact-row"><span class="contact-icon">📍</span><span>Northwestern University, Evanston, IL (Sep 2026)</span></div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2026 Steven Sun (孙佑平)
+</footer>
+
+</body>
+</html>

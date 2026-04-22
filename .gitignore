@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Claude local config
+.claude/
+
+# Resume source files (not needed for the public site)
+山东大学*.docx
+山东大学*.pdf
+
+# Python
+__pycache__/
+*.pyc
