@@ -453,9 +453,10 @@ def h_contact(fields):
 
 # ─── 主程序 ────────────────────────────────────────────────────────────────────
 
-def build():
-    md = read('content.md')
-    template = read('template.html')
+def build_one(content_path, template_path, output_path):
+    """读 content.md + template.html，填模板，写到 output_path。"""
+    md = read(content_path)
+    template = read(template_path)
     sections = split_h1(md)
 
     def get(name, default=''):
@@ -478,8 +479,15 @@ def build():
     for placeholder, html in replacements.items():
         output = output.replace(placeholder, html)
 
-    write('index.html', output)
-    print('✓ index.html 已生成')
+    write(output_path, output)
+    print(f'✓ {output_path} 已生成')
+
+
+def build():
+    # 英文版（默认）
+    build_one('content.md', 'template.html', 'index.html')
+    # 中文版
+    build_one('content-zh.md', 'template-zh.html', 'zh.html')
 
 
 if __name__ == '__main__':

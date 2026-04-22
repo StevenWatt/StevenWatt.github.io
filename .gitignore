@@ -7,6 +7,8 @@
 # Resume source files (not needed for the public site)
 山东大学*.docx
 山东大学*.pdf
+# BUT keep the public CV version (see Youping-Sun-CV.pdf)
+!Youping-Sun-CV.pdf
 
 # Python
 __pycache__/

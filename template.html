@@ -16,11 +16,18 @@
     <meta name="google-site-verification" content="FhCWCNZnreKd0JSCLS7-70mfiL63hJrweVveEujn2XI">
     <meta name="google-site-verification" content="47rIF8einehzaY6lTmtyNBeOEk5bT-_sr7sjpQNY8YI">
 
+    <!-- Alternate language versions (tells Google this is the EN page with a ZH version) -->
+    <link rel="alternate" hreflang="en" href="https://youpingsun.me/">
+    <link rel="alternate" hreflang="zh-CN" href="https://youpingsun.me/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://youpingsun.me/">
+
     <!-- Open Graph (Facebook, LinkedIn, WeChat etc.) -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Youping Sun | Robotics Engineer &amp; ML Researcher">
     <meta property="og:description" content="Robotics Engineering undergraduate at Shandong University, ML researcher on sEMG-based gait analysis. Incoming MS at Northwestern University.">
     <meta property="og:image" content="myPhoto.jpeg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
     <meta property="profile:first_name" content="Youping">
     <meta property="profile:last_name" content="Sun">
 
@@ -134,6 +141,83 @@
         }
 
         .nav-links a:hover { color: var(--link); text-decoration: none; }
+
+        /* ===== LANGUAGE TOGGLE ===== */
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .lang-toggle a,
+        .lang-toggle span {
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle a {
+            color: var(--muted);
+        }
+
+        .lang-toggle a:hover {
+            color: var(--link);
+            background: var(--bg-alt);
+            text-decoration: none;
+        }
+
+        .lang-toggle .active {
+            color: var(--text);
+            background: var(--bg-alt);
+        }
+
+        .lang-toggle .sep {
+            color: var(--border);
+            padding: 0;
+        }
+
+        /* ===== CV DOWNLOAD BUTTON ===== */
+        .cv-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.9rem;
+            padding: 0.55rem 1rem;
+            background: var(--link);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .cv-download:hover {
+            background: #0856a0;
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        .cv-download svg { flex-shrink: 0; }
+
+        /* ===== VISIT COUNTER ===== */
+        .visits {
+            margin-top: 1.2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .visits img {
+            max-height: 20px;
+            vertical-align: middle;
+        }
 
         /* ===== PAGE ===== */
         .page {
@@ -538,6 +622,11 @@
         <li><a href="#awards">Awards</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="lang-toggle">
+        <span class="active">EN</span>
+        <span class="sep">/</span>
+        <a href="zh.html" hreflang="zh-CN">中</a>
+    </div>
 </nav>
 
 <div class="page">
@@ -560,12 +649,17 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://scholar.google.com" target="_blank" rel="noopener">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-                                Google Scholar
+                            <a href="https://ieeexplore.ieee.org/author/37088146237" target="_blank" rel="noopener">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                                IEEE Xplore
                             </a>
                         </li>
                     </ul>
+
+                    <a href="Youping-Sun-CV.pdf" class="cv-download" target="_blank" download>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download CV
+                    </a>
                 </div>
             </div>
             <div class="bio-col">
@@ -636,6 +730,9 @@
 
 <footer>
     &copy; 2026 Youping Sun (孙佑平)
+    <div class="visits">
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=youpingsun.me&left_text=Total%20Visits&left_color=666666&right_color=0a6fc2" alt="Total visits">
+    </div>
 </footer>
 
 </body>
