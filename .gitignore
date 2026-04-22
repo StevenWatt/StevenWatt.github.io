@@ -4,11 +4,10 @@
 # Claude local config
 .claude/
 
-# Resume source files (not needed for the public site)
+# Raw resume source files (not needed for the public site)
 山东大学*.docx
 山东大学*.pdf
-# BUT keep the public CV version (see Youping-Sun-CV.pdf)
-!Youping-Sun-CV.pdf
+# The public CVs Youping_Sun_Resume_EN.pdf / _ZH.pdf are tracked normally
 
 # Python
 __pycache__/
