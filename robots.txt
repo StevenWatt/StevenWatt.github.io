@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stevenwatt.github.io/sitemap.xml
+Sitemap: https://youpingsun.me/sitemap.xml
