@@ -209,14 +209,39 @@
 
         /* ===== VISIT COUNTER ===== */
         .visits {
-            margin-top: 1.2rem;
-            display: flex;
-            justify-content: center;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin-left: 0.35rem;
+            padding: 0.15rem 0.65rem;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--bg-alt);
+            font-size: 0.76rem;
+            color: var(--muted);
+            vertical-align: middle;
+            line-height: 1.4;
         }
 
-        .visits img {
-            max-height: 20px;
-            vertical-align: middle;
+        .visits-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--link);
+            flex-shrink: 0;
+        }
+
+        .visits-count {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            color: var(--text);
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.01em;
+        }
+
+        .visits-label {
+            letter-spacing: 0.02em;
         }
 
         /* ===== PAGE ===== */
@@ -730,9 +755,11 @@
 
 <footer>
     &copy; 2026 孙佑平 (Youping Sun)
-    <div class="visits">
-        <img src="https://youpingsun.goatcounter.com/counter/TOTAL.svg?style=plain&no_branding=1" alt="总访问量">
-    </div>
+    <span class="visits" aria-label="访客统计">
+        <span class="visits-dot" aria-hidden="true"></span>
+        <span class="visits-count" id="gc-count">—</span>
+        <span class="visits-label">位访客</span>
+    </span>
 </footer>
 
 <!-- GoatCounter 统计（隐私友好，无 cookie，不存 IP）-->
@@ -757,6 +784,17 @@
         || localStorage.getItem('skipgc') === 't') {
       window.goatcounter = { no_onload: true };
     }
+
+    // 从 GoatCounter 读取真实访问数，渲染到自定义 UI
+    fetch('https://youpingsun.goatcounter.com/counter/TOTAL.json')
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        var el = document.getElementById('gc-count');
+        if (!el) return;
+        var n = parseInt(d && d.count_unique, 10);
+        if (!isNaN(n)) el.textContent = n.toLocaleString();
+      })
+      .catch(function () { /* 失败时保留占位符 */ });
   })();
 </script>
 <script data-goatcounter="https://youpingsun.goatcounter.com/count"
