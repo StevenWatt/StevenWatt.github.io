@@ -253,11 +253,24 @@
 
         /* ===== SECTION ===== */
         .section {
-            padding: 3.5rem 0;
-            border-bottom: 1px solid var(--border);
+            padding: 2.25rem 1.85rem;
+            border-radius: 14px;
+            margin-bottom: 1rem;
         }
 
-        .section:last-child { border-bottom: none; }
+        .section:last-child { margin-bottom: 0; }
+
+        /* Per-section subtle tints — each area gets its own soft hue */
+        #about        { background: #fcfaf6; }  /* warm cream        */
+        #education    { background: #f0f5fb; }  /* light blue        */
+        #research     { background: #eef7f0; }  /* light green       */
+        #news         { background: #fbf5e9; }  /* light amber       */
+        #publications { background: #f5f1fa; }  /* light lavender    */
+        #projects     { background: #eef7fa; }  /* light cyan        */
+        #awards       { background: #fbf1ec; }  /* light peach       */
+        #activities   { background: #f6f0f6; }  /* light mauve       */
+        #skills       { background: #f1f4f8; }  /* light slate       */
+        #contact      { background: #eef7ef; }  /* light mint        */
 
         .section-heading {
             font-family: 'Montserrat', sans-serif;
@@ -265,21 +278,18 @@
             font-weight: 700;
             color: var(--text);
             margin-bottom: 1.75rem;
-            padding: 0 0 0.5rem 0.95rem;
+            padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--text);
-            display: inline-block;
-            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
         }
 
-        .section-heading::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.2em;
-            width: 4px;
-            height: 1em;
-            background: var(--link);
-            border-radius: 2px;
+        .section-icon {
+            color: var(--link);
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
         }
 
         /* ===== ABOUT ===== */
@@ -292,7 +302,7 @@
 
         .profile-col {
             text-align: center;
-            background: var(--bg-alt);
+            background: var(--bg);
             border: 1px solid var(--border);
             border-radius: 10px;
             padding: 1.75rem 1.1rem 1.4rem;
@@ -609,7 +619,7 @@
         }
 
         .skills-grid > div {
-            background: var(--bg-alt);
+            background: var(--bg);
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 1rem 1.1rem 1.1rem;
@@ -641,12 +651,6 @@
         .contact-block {
             font-size: 0.95rem;
             line-height: 2;
-            display: inline-block;
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem 1.5rem;
-            min-width: min(420px, 100%);
         }
 
         .contact-row {
@@ -674,7 +678,7 @@
             nav { padding: 0 1.25rem; }
             .page { padding: 0 1.25rem; }
             .nav-links { gap: 1rem; }
-            .section { padding: 2.5rem 0; }
+            .section { padding: 1.75rem 1.25rem; margin-bottom: 0.75rem; }
         }
 
         @media (max-width: 640px) {
@@ -750,7 +754,10 @@
 
     <!-- EDUCATION -->
     <section class="section" id="education">
-        <h2 class="section-heading">Education</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            Education
+        </h2>
         <div class="tl-wrap">
             <div class="tl-item">
                 <div class="tl-date">Sep 2026 – May 2028 (Expected)</div>
@@ -776,7 +783,10 @@
 
     <!-- RESEARCH EXPERIENCE -->
     <section class="section" id="research">
-        <h2 class="section-heading">Research Experience</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>
+            Research Experience
+        </h2>
         <div class="tl-wrap">
             <div class="tl-item">
                 <div class="tl-date">Oct 2024 – Present</div>
@@ -798,7 +808,10 @@
 
     <!-- NEWS -->
     <section class="section" id="news">
-        <h2 class="section-heading">News</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+            News
+        </h2>
         <ul class="news-list">
             <li><span class="news-tag">[Apr 2026]</span> Our paper &quot;Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction&quot; has been accepted to <strong>ICCA 2026</strong>.</li>
             <li><span class="news-tag">[2026]</span> Paper &quot;Cross-Locomotion Task Generalization in sEMG-Based Gait Phase Prediction Using ANNs&quot; accepted to <strong>AIACT 2026</strong>.</li>
@@ -811,7 +824,10 @@
 
     <!-- PUBLICATIONS -->
     <section class="section" id="publications">
-        <h2 class="section-heading">Publications</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Publications
+        </h2>
         <div class="year-group">
             <div class="year-label">2026</div>
             <div class="pub-entry"><div class="pub-body"><div class="pub-title">"Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction"</div><div class="pub-authors"><strong>Sun, Y.</strong>, et al.</div><div class="pub-venue">ICCA 2026 — International Conference on Control and Automation</div><div class="pub-meta"><span class="pub-badge accepted">Accepted</span></div></div></div>
@@ -826,7 +842,10 @@
 
     <!-- PROJECTS -->
     <section class="section" id="projects">
-        <h2 class="section-heading">Projects</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+            Projects
+        </h2>
         <div class="project-entry"><div class="project-title">Humanoid Robot Control for Warehouse Scenarios</div><div class="project-meta">19th &quot;Challenge Cup&quot; AI+ Special Competition &nbsp;·&nbsp; Jul 2025 – Nov 2025</div><div class="project-award">★ National 2nd Prize</div><div class="project-desc">Built a Docker-based simulation environment and developed upper-level control algorithms enabling a humanoid robot&#x27;s dexterous hand to perform object grasping and mobile manipulation planning for warehouse logistics tasks.</div></div>
         <div class="project-entry"><div class="project-title">Intelligent Quadruped Robot — Webots Simulation &amp; Motion Control</div><div class="project-meta">Intelligent Robotics Course Practice &nbsp;·&nbsp; Feb 2025 – Mar 2025</div><div class="project-desc">Implemented stair-climbing pose transformation and motion control in an Ubuntu + Webots environment. Designed LiDAR- and camera-fused line-tracking and obstacle avoidance algorithms achieving high-speed stable navigation.</div></div>
         <div class="project-entry"><div class="project-title">Visual Recognition &amp; Vehicle Motion Control Algorithm</div><div class="project-meta">19th National Intelligent Vehicle Competition · iFLYTEK Track &nbsp;·&nbsp; Sep 2023 – Aug 2024</div><div class="project-award">★ Provincial 1st Prize</div><div class="project-desc">Developed OpenCV-based track recognition with curve-type classification and adaptive steering control. Integrated ROS with PID control algorithms to achieve high-speed, stable navigation across varied track configurations.</div></div>
@@ -835,7 +854,10 @@
 
     <!-- AWARDS -->
     <section class="section" id="awards">
-        <h2 class="section-heading">Awards &amp; Honors</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            Awards &amp; Honors
+        </h2>
         <ul class="award-list">
             <li><span class="award-text award-highlight">National 2nd Prize — 19th &quot;Challenge Cup&quot; AI+ Special Competition</span><span class="award-year">2025</span></li>
             <li><span class="award-text award-highlight">Provincial 1st Prize — 19th National Intelligent Vehicle Competition (iFLYTEK Track)</span><span class="award-year">2024</span></li>
@@ -850,7 +872,10 @@
 
     <!-- STUDENT ACTIVITIES -->
     <section class="section" id="activities">
-        <h2 class="section-heading">Student Activities</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Student Activities
+        </h2>
         <div class="project-entry"><div class="project-title">Director, Social Practice Management Center</div><div class="project-meta">Sep 2023 – Jun 2024</div><div class="project-desc">Organized enterprise study-tour activities with Qingdao TGOOD, Shandong Lingong, and Jinan Bosch; coordinated winter and summer break social practice programs and evaluations; hosted &quot;Return from Practice, Share Your Growth&quot; experience-sharing sessions.</div></div>
         <div class="project-entry"><div class="project-title">Freshman Class Representative</div><div class="project-meta">Sep 2023 – Feb 2024</div><div class="project-desc">Organized freshmen military training and campus orientation activities; supported freshmen in joining student clubs and organizations; coordinated freshman class cadre selection.</div></div>
         <div class="project-entry"><div class="project-title">Class Youth League Secretary</div><div class="project-meta">Sep 2022 – Jun 2023</div><div class="project-desc">Organized class-level Communist Youth League branch activities; managed the Youth League branch management system; coordinated class participation in college- and university-wide events.</div></div>
@@ -859,7 +884,10 @@
 
     <!-- SKILLS -->
     <section class="section" id="skills">
-        <h2 class="section-heading">Skills</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Skills
+        </h2>
         <div class="skills-grid">
             <div><div class="skill-group-title">Programming</div><div class="skill-group-body">Python, C/C++, R, MATLAB, Wolfram</div></div>
             <div><div class="skill-group-title">Tools &amp; Frameworks</div><div class="skill-group-body">ROS, OpenCV, Webots, Docker, SolidWorks, Blender, Tableau</div></div>
@@ -870,7 +898,10 @@
 
     <!-- CONTACT -->
     <section class="section" id="contact">
-        <h2 class="section-heading">Contact</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Contact
+        </h2>
         <div class="contact-block">
             <div class="contact-row"><span class="contact-icon">✉</span><a href="mailto:sunuping1@gmail.com">sunuping1@gmail.com</a></div>
             <div class="contact-row"><span class="contact-icon">📞</span><span>+86 185 6192 9927</span></div>

@@ -253,11 +253,24 @@
 
         /* ===== SECTION ===== */
         .section {
-            padding: 3.5rem 0;
-            border-bottom: 1px solid var(--border);
+            padding: 2.25rem 1.85rem;
+            border-radius: 14px;
+            margin-bottom: 1rem;
         }
 
-        .section:last-child { border-bottom: none; }
+        .section:last-child { margin-bottom: 0; }
+
+        /* Per-section subtle tints — each area gets its own soft hue */
+        #about        { background: #fcfaf6; }
+        #education    { background: #f0f5fb; }
+        #research     { background: #eef7f0; }
+        #news         { background: #fbf5e9; }
+        #publications { background: #f5f1fa; }
+        #projects     { background: #eef7fa; }
+        #awards       { background: #fbf1ec; }
+        #activities   { background: #f6f0f6; }
+        #skills       { background: #f1f4f8; }
+        #contact      { background: #eef7ef; }
 
         .section-heading {
             font-family: 'Montserrat', sans-serif;
@@ -265,21 +278,18 @@
             font-weight: 700;
             color: var(--text);
             margin-bottom: 1.75rem;
-            padding: 0 0 0.5rem 0.95rem;
+            padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--text);
-            display: inline-block;
-            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
         }
 
-        .section-heading::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.2em;
-            width: 4px;
-            height: 1em;
-            background: var(--link);
-            border-radius: 2px;
+        .section-icon {
+            color: var(--link);
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
         }
 
         /* ===== ABOUT ===== */
@@ -292,7 +302,7 @@
 
         .profile-col {
             text-align: center;
-            background: var(--bg-alt);
+            background: var(--bg);
             border: 1px solid var(--border);
             border-radius: 10px;
             padding: 1.75rem 1.1rem 1.4rem;
@@ -609,7 +619,7 @@
         }
 
         .skills-grid > div {
-            background: var(--bg-alt);
+            background: var(--bg);
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 1rem 1.1rem 1.1rem;
@@ -641,12 +651,6 @@
         .contact-block {
             font-size: 0.95rem;
             line-height: 2;
-            display: inline-block;
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem 1.5rem;
-            min-width: min(420px, 100%);
         }
 
         .contact-row {
@@ -674,7 +678,7 @@
             nav { padding: 0 1.25rem; }
             .page { padding: 0 1.25rem; }
             .nav-links { gap: 1rem; }
-            .section { padding: 2.5rem 0; }
+            .section { padding: 1.75rem 1.25rem; margin-bottom: 0.75rem; }
         }
 
         @media (max-width: 640px) {
@@ -750,7 +754,10 @@
 
     <!-- EDUCATION -->
     <section class="section" id="education">
-        <h2 class="section-heading">教育背景</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            教育背景
+        </h2>
         <div class="tl-wrap">
             <div class="tl-item">
                 <div class="tl-date">2026.09 – 2028.05（预计）</div>
@@ -776,7 +783,10 @@
 
     <!-- RESEARCH EXPERIENCE -->
     <section class="section" id="research">
-        <h2 class="section-heading">科研经历</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>
+            科研经历
+        </h2>
         <div class="tl-wrap">
             <div class="tl-item">
                 <div class="tl-date">2024.10 – 至今</div>
@@ -798,7 +808,10 @@
 
     <!-- NEWS -->
     <section class="section" id="news">
-        <h2 class="section-heading">最新动态</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+            最新动态
+        </h2>
         <ul class="news-list">
             <li><span class="news-tag">[2026.04]</span> 论文《Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction》被 <strong>ICCA 2026</strong> 接收。</li>
             <li><span class="news-tag">[2026]</span> 论文《Cross-Locomotion Task Generalization in sEMG-Based Gait Phase Prediction Using ANNs》被 <strong>AIACT 2026</strong> 接收。</li>
@@ -811,7 +824,10 @@
 
     <!-- PUBLICATIONS -->
     <section class="section" id="publications">
-        <h2 class="section-heading">论文发表</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            论文发表
+        </h2>
         <div class="year-group">
             <div class="year-label">2026</div>
             <div class="pub-entry"><div class="pub-body"><div class="pub-title">"Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction"</div><div class="pub-authors"><strong>Sun, Y.</strong>, et al.</div><div class="pub-venue">ICCA 2026 — 国际控制与自动化会议</div><div class="pub-meta"><span class="pub-badge accepted">已接收</span></div></div></div>
@@ -826,7 +842,10 @@
 
     <!-- PROJECTS -->
     <section class="section" id="projects">
-        <h2 class="section-heading">项目经历</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+            项目经历
+        </h2>
         <div class="project-entry"><div class="project-title">仓储场景人形机器人控制开发</div><div class="project-meta">第十九届&quot;挑战杯&quot;AI+ 专项赛 &nbsp;·&nbsp; 2025.07 – 2025.11</div><div class="project-award">★ 全国二等奖</div><div class="project-desc">搭建基于 Docker 的仿真环境，并开发上层控制算法，实现人形机器人灵巧手在仓储物流场景下的物体抓取与移动操作规划。</div></div>
         <div class="project-entry"><div class="project-title">智能四足机器人 — Webots 仿真与运动控制</div><div class="project-meta">智能机器人课程实践 &nbsp;·&nbsp; 2025.02 – 2025.03</div><div class="project-desc">在 Ubuntu + Webots 环境中实现机器狗上下楼梯的位姿变换与运动控制。设计基于 LiDAR 与相机融合的巡线移动与避障算法，实现高速稳定导航。</div></div>
         <div class="project-entry"><div class="project-title">视觉识别与车辆运动控制算法</div><div class="project-meta">第十九届全国大学生智能汽车竞赛 · 讯飞赛道 &nbsp;·&nbsp; 2023.09 – 2024.08</div><div class="project-award">★ 省一等奖</div><div class="project-desc">基于 OpenCV 进行赛道识别与弯道类型区分，实现针对不同弯道的自适应控制策略。结合 ROS 与 PID 控制算法，实现小车高速且稳定地通过赛道。</div></div>
@@ -835,7 +854,10 @@
 
     <!-- AWARDS -->
     <section class="section" id="awards">
-        <h2 class="section-heading">荣誉奖项</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            荣誉奖项
+        </h2>
         <ul class="award-list">
             <li><span class="award-text award-highlight">第十九届&quot;挑战杯&quot;AI+ 专项赛 全国二等奖</span><span class="award-year">2025</span></li>
             <li><span class="award-text award-highlight">第十九届全国大学生智能汽车竞赛（讯飞赛道）省一等奖</span><span class="award-year">2024</span></li>
@@ -850,7 +872,10 @@
 
     <!-- STUDENT ACTIVITIES -->
     <section class="section" id="activities">
-        <h2 class="section-heading">学生工作</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            学生工作
+        </h2>
         <div class="project-entry"><div class="project-title">社会实践管理中心部长</div><div class="project-meta">2023.09 – 2024.06</div><div class="project-desc">组织青岛特锐德、山东临工、济南博世等企业研学活动；组织开展寒暑假社会实践活动与评比；开展&quot;实践归来话成长&quot;经验分享会。</div></div>
         <div class="project-entry"><div class="project-title">新生班代</div><div class="project-meta">2023.09 – 2024.02</div><div class="project-desc">组织新生参与军训和校园活动；为新生加入社团、学生会提供支持；组织新生班级班干部选拔事项。</div></div>
         <div class="project-entry"><div class="project-title">班级团支书</div><div class="project-meta">2022.09 – 2023.06</div><div class="project-desc">组织班级开展各类团支部活动；管理团支部智慧团建系统；组织班级参与院级和校级各类活动。</div></div>
@@ -859,7 +884,10 @@
 
     <!-- SKILLS -->
     <section class="section" id="skills">
-        <h2 class="section-heading">技能</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            技能
+        </h2>
         <div class="skills-grid">
             <div><div class="skill-group-title">编程语言</div><div class="skill-group-body">Python, C/C++, R, MATLAB, Wolfram</div></div>
             <div><div class="skill-group-title">工具与框架</div><div class="skill-group-body">ROS, OpenCV, Webots, Docker, SolidWorks, Blender, Tableau</div></div>
@@ -870,7 +898,10 @@
 
     <!-- CONTACT -->
     <section class="section" id="contact">
-        <h2 class="section-heading">联系方式</h2>
+        <h2 class="section-heading">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            联系方式
+        </h2>
         <div class="contact-block">
             <div class="contact-row"><span class="contact-icon">✉</span><a href="mailto:sunuping1@gmail.com">sunuping1@gmail.com</a></div>
             <div class="contact-row"><span class="contact-icon">📞</span><span>+86 185 6192 9927</span></div>
