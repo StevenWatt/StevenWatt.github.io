@@ -736,6 +736,29 @@
 </footer>
 
 <!-- GoatCounter analytics (privacy-friendly, no cookies, no IP storage) -->
+<script>
+  // Analytics skip logic — don't pollute the data with our own visits.
+  //   • Auto-skip on localhost / file:// (dev)
+  //   • Visit ?skipgc=1 once in a browser to permanently exclude it
+  //   • Visit ?skipgc=0 to resume being counted
+  (function () {
+    var h = location.hostname;
+    var p = new URLSearchParams(location.search);
+    if (p.has('skipgc')) {
+      if (p.get('skipgc') === '0') {
+        localStorage.removeItem('skipgc');
+        alert('Analytics tracking re-enabled from this browser.');
+      } else {
+        localStorage.setItem('skipgc', 't');
+        alert('Visits from this browser will no longer be counted.');
+      }
+    }
+    if (!h || h === 'localhost' || h === '127.0.0.1'
+        || localStorage.getItem('skipgc') === 't') {
+      window.goatcounter = { no_onload: true };
+    }
+  })();
+</script>
 <script data-goatcounter="https://youpingsun.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 

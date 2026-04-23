@@ -736,6 +736,29 @@
 </footer>
 
 <!-- GoatCounter 统计（隐私友好，无 cookie，不存 IP）-->
+<script>
+  // 排除自己的访问，避免污染统计数据：
+  //   • localhost / file:// 自动排除（本地开发）
+  //   • 在任意浏览器访问 ?skipgc=1 一次 → 该浏览器永久排除
+  //   • 访问 ?skipgc=0 → 重新开始统计
+  (function () {
+    var h = location.hostname;
+    var p = new URLSearchParams(location.search);
+    if (p.has('skipgc')) {
+      if (p.get('skipgc') === '0') {
+        localStorage.removeItem('skipgc');
+        alert('已恢复统计该浏览器的访问。');
+      } else {
+        localStorage.setItem('skipgc', 't');
+        alert('该浏览器后续访问将不再被计入统计。');
+      }
+    }
+    if (!h || h === 'localhost' || h === '127.0.0.1'
+        || localStorage.getItem('skipgc') === 't') {
+      window.goatcounter = { no_onload: true };
+    }
+  })();
+</script>
 <script data-goatcounter="https://youpingsun.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
