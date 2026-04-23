@@ -265,9 +265,21 @@
             font-weight: 700;
             color: var(--text);
             margin-bottom: 1.75rem;
-            padding-bottom: 0.5rem;
+            padding: 0 0 0.5rem 0.95rem;
             border-bottom: 2px solid var(--text);
             display: inline-block;
+            position: relative;
+        }
+
+        .section-heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.2em;
+            width: 4px;
+            height: 1em;
+            background: var(--link);
+            border-radius: 2px;
         }
 
         /* ===== ABOUT ===== */
@@ -278,7 +290,13 @@
             align-items: start;
         }
 
-        .profile-col { text-align: center; }
+        .profile-col {
+            text-align: center;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.75rem 1.1rem 1.4rem;
+        }
 
         .avatar {
             width: 170px;
@@ -442,10 +460,19 @@
         .news-list li:last-child { border-bottom: none; }
 
         .news-tag {
-            font-weight: 500;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             color: var(--muted);
-            font-size: 0.85rem;
-            margin-right: 0.5rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.03em;
+            padding: 0.12rem 0.55rem;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-right: 0.6rem;
+            vertical-align: 0.08em;
+            white-space: nowrap;
         }
 
         /* ===== PUBLICATIONS ===== */
@@ -569,13 +596,29 @@
             flex-shrink: 0;
         }
 
-        .award-highlight { font-weight: 500; }
+        .award-highlight {
+            font-weight: 600;
+            color: var(--text);
+        }
 
         /* ===== SKILLS ===== */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.75rem;
+            gap: 1rem;
+        }
+
+        .skills-grid > div {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.1rem 1.1rem;
+            transition: border-color 0.2s, transform 0.15s;
+        }
+
+        .skills-grid > div:hover {
+            border-color: var(--link);
+            transform: translateY(-2px);
         }
 
         .skill-group-title {
@@ -595,7 +638,16 @@
         }
 
         /* ===== CONTACT ===== */
-        .contact-block { font-size: 0.95rem; line-height: 2; }
+        .contact-block {
+            font-size: 0.95rem;
+            line-height: 2;
+            display: inline-block;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            min-width: min(420px, 100%);
+        }
 
         .contact-row {
             display: flex;
