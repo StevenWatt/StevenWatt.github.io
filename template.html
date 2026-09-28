@@ -10,6 +10,9 @@
     <meta name="author" content="Youping Sun (Sun Youping, 孙佑平)">
     <meta name="keywords" content="Youping Sun, Sun Youping, 孙佑平, Robotics Engineer, Machine Learning Researcher, sEMG, Gait Analysis, Neural Networks, Northwestern University, Shandong University, University of Wisconsin-Madison, Computer Engineering">
     <link rel="canonical" href="https://youpingsun.me/">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta property="og:url" content="https://youpingsun.me/">
 
     <!-- Google Search Console verification -->
@@ -20,7 +23,10 @@
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Youping Sun | Robotics Engineer &amp; ML Researcher">
     <meta property="og:description" content="MS student in Computer Engineering at Northwestern University, ML researcher on sEMG-based gait analysis.">
-    <meta property="og:image" content="myPhoto.jpeg">
+    <meta property="og:image" content="https://youpingsun.me/avatar.jpg">
+    <meta property="og:image:width" content="480">
+    <meta property="og:image:height" content="480">
+    <meta property="og:image:alt" content="Youping Sun">
     <meta property="og:locale" content="en_US">
     <meta property="profile:first_name" content="Youping">
     <meta property="profile:last_name" content="Sun">
@@ -29,7 +35,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Youping Sun | Robotics Engineer &amp; ML Researcher">
     <meta name="twitter:description" content="Robotics &amp; ML researcher. MS student at Northwestern University.">
-    <meta name="twitter:image" content="myPhoto.jpeg">
+    <meta name="twitter:image" content="https://youpingsun.me/avatar.jpg">
 
     <!-- Structured Data: Person schema, helps Google understand this is a personal page -->
     <script type="application/ld+json">
@@ -40,7 +46,7 @@
       "alternateName": ["Sun Youping", "孙佑平"],
       "jobTitle": "Robotics Engineer & ML Researcher",
       "email": "mailto:sunuping2@gmail.com",
-      "image": "myPhoto.jpeg",
+      "image": "https://youpingsun.me/avatar.jpg",
       "alumniOf": [
         { "@type": "CollegeOrUniversity", "name": "Shandong University", "url": "https://www.sdu.edu.cn" },
         { "@type": "CollegeOrUniversity", "name": "University of Wisconsin–Madison", "url": "https://www.wisc.edu" }
@@ -224,7 +230,6 @@
         #publications { background: #f5f1fa; }  /* light lavender    */
         #projects     { background: #eef7fa; }  /* light cyan        */
         #awards       { background: #fbf1ec; }  /* light peach       */
-        #activities   { background: #f6f0f6; }  /* light mauve       */
         #skills       { background: #f1f4f8; }  /* light slate       */
         #contact      { background: #eef7ef; }  /* light mint        */
 
@@ -504,6 +509,52 @@
 
         .pub-badge.accepted { border-color: #28a745; color: #28a745; }
 
+        .pub-venue strong { font-style: normal; font-weight: 500; color: var(--text); }
+        .pub-pages { white-space: nowrap; }
+
+        .pub-body { min-width: 0; }  /* lets a wide BibTeX block scroll instead of stretching the page */
+
+        .pub-thumb { flex: 0 0 160px; }
+        .pub-thumb img { display: block; width: 100%; border: 1px solid var(--border); border-radius: 4px; }
+
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.5rem;
+        }
+
+        .pub-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            line-height: 1.4;
+            padding: 0.15rem 0.55rem;
+            border: 1px solid var(--link);
+            border-radius: 3px;
+            background: transparent;
+            color: var(--link);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pub-link:hover,
+        .pub-link[aria-expanded="true"] { background: var(--link); color: #fff; text-decoration: none; }
+
+        .pub-bibtex {
+            margin-top: 0.6rem;
+            padding: 0.75rem 0.9rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.74rem;
+            line-height: 1.55;
+            color: var(--text);
+            overflow-x: auto;
+        }
+
         /* ===== PROJECTS & ACTIVITIES ===== */
         .project-entry {
             margin-bottom: 1.75rem;
@@ -640,6 +691,8 @@
         @media (max-width: 640px) {
             .nav-links li:nth-child(n+5) { display: none; }
             .award-list li { flex-direction: column; gap: 0.1rem; }
+            .pub-entry { flex-direction: column; }
+            .pub-thumb { flex-basis: auto; max-width: 260px; }
         }
 
         /* Phones: avatar + details side by side no longer fit, so stack them */
@@ -673,7 +726,7 @@
     <section class="section" id="about">
         <div class="about-layout">
             <div class="profile-col">
-                <div class="avatar"><img src="myPhoto.jpeg" alt="Youping Sun"></div>
+                <div class="avatar"><img src="avatar.jpg" alt="Youping Sun" width="480" height="480"></div>
                 <div>
                     <div class="profile-name">Youping Sun</div>
                     <div class="profile-sub">孙佑平</div>
@@ -764,15 +817,6 @@
 {{AWARDS}}
     </section>
 
-    <!-- STUDENT ACTIVITIES -->
-    <section class="section" id="activities">
-        <h2 class="section-heading">
-            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Student Activities
-        </h2>
-{{ACTIVITIES}}
-    </section>
-
     <!-- SKILLS -->
     <section class="section" id="skills">
         <h2 class="section-heading">
@@ -794,13 +838,25 @@
 </div>
 
 <footer>
-    &copy; 2026 Youping Sun (孙佑平)
+    &copy; 2026 Youping Sun (孙佑平) · Last updated {{UPDATED}}
     <span class="visits" aria-label="Site visitor statistics">
         <span class="visits-dot" aria-hidden="true"></span>
         <span class="visits-count" id="gc-count">—</span>
         <span class="visits-label">visitors</span>
     </span>
 </footer>
+
+<script>
+  // Show / hide the BibTeX block under each publication
+  document.querySelectorAll('.pub-bib-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var pre = btn.parentElement.nextElementSibling;
+      var open = pre.hidden;
+      pre.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+</script>
 
 <!-- GoatCounter analytics (privacy-friendly, no cookies, no IP storage) -->
 <script>

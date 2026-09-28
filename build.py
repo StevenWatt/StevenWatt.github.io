@@ -12,12 +12,13 @@ build.py — 从 content.md 生成 index.html
     Publications         — 论文（按年份分组）
     Projects             — 项目
     Awards               — 奖项（带年份）
-    Student Activities   — 学生工作
+    Student Activities   — 学生工作（英文版已不展示，模板里没有这个 section）
     Skills               — 技能（按分类）
     Contact              — 联系方式
 """
 
 import re, html as hl
+from datetime import date
 from pathlib import Path
 
 # ─── 工具函数 ─────────────────────────────────────────────────────────────────
@@ -174,9 +175,14 @@ def parse_publications(text):
     格式:
       ## 年份
       ### 论文标题
-      Authors: 作者
-      Venue:   会议/期刊
-      Status:  状态（可选，如 Accepted）
+      Authors:   作者（自己的名字用 **加粗**）
+      Venue:     会议/期刊全称
+      Pages:     页码（可选，如 77–81）
+      DOI:       DOI（可选，只写 10.xxxx/...，会自动生成 DOI 链接和 BibTeX）
+      Publisher: 出版方（可选，只用于 BibTeX，如 ACM）
+      Links:     其他链接（可选，如 [PDF](url), [Code](url)）
+      Image:     代表图路径（可选，如 images/pubs/icca2026.png）
+      Status:    状态（可选，如 Accepted）
     返回 {year: [paper_dict, ...]}
     """
     groups, cur_year, cur_paper = {}, None, None
@@ -188,10 +194,12 @@ def parse_publications(text):
             groups.setdefault(cur_year, [])
             cur_paper = None
         elif s.startswith('### ') and cur_year is not None:
-            cur_paper = {'title': s[4:], 'authors': '', 'venue': '', 'status': ''}
+            cur_paper = {'title': s[4:], 'authors': '', 'venue': '', 'status': '',
+                         'year': cur_year}
             groups[cur_year].append(cur_paper)
         elif cur_paper is not None:
-            for key in ['Authors', 'Venue', 'Status']:
+            for key in ['Authors', 'Venue', 'Pages', 'DOI', 'Publisher',
+                        'Links', 'Image', 'Status']:
                 v = kv(s, key)
                 if v is not None:
                     cur_paper[key.lower()] = v
@@ -357,6 +365,34 @@ def h_news(items):
     return f'        <ul class="news-list">\n{lis}        </ul>'
 
 
+def strip_md(text):
+    """去掉 **加粗** / *斜体* 标记，得到纯文本（用于 BibTeX）。"""
+    return re.sub(r'\*{1,2}(.+?)\*{1,2}', r'\1', text)
+
+
+def bibtex(p):
+    """根据论文字段生成 BibTeX 条目。"""
+    names = re.split(r',\s*and\s+|\s+and\s+|,\s*', strip_md(p['authors']))
+    authors = []
+    for n in filter(None, (x.strip() for x in names)):
+        parts = n.split()
+        authors.append(f'{parts[-1]}, {" ".join(parts[:-1])}' if len(parts) > 1 else n)
+    stop = {'a', 'an', 'the', 'on', 'of', 'for', 'in', 'with', 'and', 'to'}
+    first = next((w for w in re.findall(r'[A-Za-z]+', p['title']) if w.lower() not in stop), 'paper')
+    last_name = authors[0].split(',')[0].lower() if authors else 'author'
+    fields = [
+        ('title', '{' + p['title'] + '}'),
+        ('author', ' and '.join(authors)),
+        ('booktitle', strip_md(p['venue'])),
+        ('pages', re.sub(r'\s*[–—-]+\s*', '--', p.get('pages', ''))),
+        ('year', p['year']),
+        ('publisher', p.get('publisher', '')),
+        ('doi', p.get('doi', '')),
+    ]
+    body = ',\n'.join(f'  {k:<9} = {{{v}}}' for k, v in fields if v)
+    return f'@inproceedings{{{last_name}{p["year"]}{first.lower()},\n{body}\n}}'
+
+
 def h_publications(groups):
     out = ''
     for year in sorted(groups, reverse=True):
@@ -365,12 +401,30 @@ def h_publications(groups):
             status = (f'<div class="pub-meta">'
                       f'<span class="pub-badge accepted">{esc(p["status"])}</span>'
                       f'</div>') if p.get('status') else ''
+            venue = inline(p['venue']) + (f', <span class="pub-pages">pp. {esc(p["pages"])}</span>'
+                                          if p.get('pages') else '')
+
+            links = []
+            if p.get('doi'):
+                links.append(('DOI', f'https://doi.org/{p["doi"]}'))
+            links += re.findall(r'\[([^\]]+)\]\(([^)]+)\)', p.get('links', ''))
+            buttons = ''.join(
+                f'<a class="pub-link" href="{esc(u)}" target="_blank" rel="noopener">{esc(t)}</a>'
+                for t, u in links)
+            buttons += ('<button class="pub-link pub-bib-toggle" type="button" '
+                        'aria-expanded="false">BibTeX</button>')
+            bib = f'<pre class="pub-bibtex" hidden>{esc(bibtex(p))}</pre>'
+
+            thumb = (f'<div class="pub-thumb"><img src="{esc(p["image"])}" '
+                     f'alt="" loading="lazy"></div>') if p.get('image') else ''
             entries += (
-                f'            <div class="pub-entry"><div class="pub-body">'
-                f'<div class="pub-title">"{esc(p["title"])}"</div>'
+                f'            <div class="pub-entry">{thumb}<div class="pub-body">'
+                f'<div class="pub-title">{esc(p["title"])}</div>'
                 f'<div class="pub-authors">{inline(p["authors"])}</div>'
-                f'<div class="pub-venue">{esc(p["venue"])}</div>'
-                f'{status}</div></div>\n'
+                f'<div class="pub-venue">{venue}</div>'
+                f'{status}'
+                f'<div class="pub-links">{buttons}</div>{bib}'
+                f'</div></div>\n'
             )
         out += (f'        <div class="year-group">\n'
                 f'            <div class="year-label">{esc(year)}</div>\n'
@@ -473,6 +527,7 @@ def build_one(content_path, template_path, output_path):
         '{{ACTIVITIES}}':   h_activities(parse_activities(get('Student Activities'))),
         '{{SKILLS}}':       h_skills(parse_skills(get('Skills'))),
         '{{CONTACT}}':      h_contact(parse_contact(get('Contact'))),
+        '{{UPDATED}}':      f'{date.today():%b} {date.today().day}, {date.today().year}',
     }
 
     output = template

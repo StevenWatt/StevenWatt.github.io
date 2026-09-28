@@ -56,19 +56,30 @@ Topic: EHD Printing — 3D Model Building, Scanning & Pattern Projection
 ## 2026
 
 ### Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction
-Authors: **Sun, Y.**, et al.
-Venue: ICCA 2026 — International Conference on Control and Automation
-Status: Accepted
+Authors: **Y. Sun**, X. Li, C. Ma, X. Ma, and H. Zhang
+Venue: 2026 IEEE 20th International Conference on Control and Automation (**ICCA**)
+Publisher: IEEE
+Pages: 1742–1747
+DOI: 10.1109/ICCA69928.2026.11618012
+Links: [IEEE Xplore](https://ieeexplore.ieee.org/document/11618012/)
 
 ### Cross-Locomotion Task Generalization in sEMG-Based Gait Phase Prediction Using Artificial Neural Networks
-Authors: **Sun, Y.**, et al.
-Venue: AIACT 2026 — Artificial Intelligence and Computer Technology
+Authors: **Y. Sun**, H. Wan, X. Li, F. Zhang, W. Wu, and H. Zhang
+Venue: 2026 10th International Conference on Artificial Intelligence, Automation and Control Technologies (**AIACT**)
+Publisher: ACM
+Pages: 77–81
+DOI: 10.1145/3795496.3795717
+Links: [ACM Digital Library](https://dl.acm.org/doi/10.1145/3795496.3795717)
 
 ## 2024
 
 ### Gait Phase Detection and Prediction with Machine Learning Models Based on sEMG
-Authors: **Sun, Y.**, & Wang, J.
-Venue: AIHCIR 2024 — AI in Human-Computer Interaction Research
+Authors: **Y. Sun**, J. Wang, Z. Wang, J. Li, Y. Li, R. Song, and H. Zhang
+Venue: 2024 3rd International Conference on Artificial Intelligence, Human-Computer Interaction and Robotics (**AIHCIR**)
+Publisher: IEEE
+Pages: 324–330
+DOI: 10.1109/AIHCIR65563.2024.00061
+Links: [IEEE Xplore](https://ieeexplore.ieee.org/document/10974321/)
 
 # Projects
 
@@ -95,38 +106,20 @@ Description: Developed OpenCV-based track recognition with curve-type classifica
 - Provincial 1st Prize — 19th National Intelligent Vehicle Competition (iFLYTEK Track) | 2024
 - Outstanding Innovation & Entrepreneurship Individual, Shandong University | 2023
 - Entrepreneurship Practice Scholarship, Shandong University | 2023
-- Advanced Individual in Freshman Volunteer Service, Shandong University | 2023
-- Outstanding Communist Youth League Member, Shandong University | 2022, 2023
 - Advanced Individual in Social Practice, Shandong University | 2022
-- School-level Outstanding Class Cadre, Shandong University | 2022
-
-# Student Activities
-
-## Director, Social Practice Management Center
-Period: Sep 2023 – Jun 2024
-Description: Organized enterprise study-tour activities with Qingdao TGOOD, Shandong Lingong, and Jinan Bosch; coordinated winter and summer break social practice programs and evaluations; hosted "Return from Practice, Share Your Growth" experience-sharing sessions.
-
-## Freshman Class Representative
-Period: Sep 2023 – Feb 2024
-Description: Organized freshmen military training and campus orientation activities; supported freshmen in joining student clubs and organizations; coordinated freshman class cadre selection.
-
-## Class Youth League Secretary
-Period: Sep 2022 – Jun 2023
-Description: Organized class-level Communist Youth League branch activities; managed the Youth League branch management system; coordinated class participation in college- and university-wide events.
 
 # Skills
 
 ## Programming
 Python, C/C++, R, MATLAB, Wolfram
 
-## Tools & Frameworks
-ROS, OpenCV, Webots, Docker, SolidWorks, Blender, Tableau
+## Machine Learning & Signal Processing
+ANN, CNN, SVM, KNN, sEMG signal processing & feature extraction
 
-## Mathematics
-Advanced Calculus, Linear Algebra, Probability & Statistics, Complex Analysis
+## Tools & Frameworks
+ROS, OpenCV, Webots, Docker, SolidWorks, Blender, COMSOL Multiphysics, Tableau
 
 # Contact
 
 Email: sunuping2@gmail.com
-Phone: +1 608-867-3225
 Location: Northwestern University, Evanston, IL, USA
