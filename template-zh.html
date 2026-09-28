@@ -6,7 +6,7 @@
     <title>孙佑平 (Youping Sun) | 机器人工程师 &amp; 机器学习研究者</title>
 
     <!-- 基础 SEO -->
-    <meta name="description" content="孙佑平 (Youping Sun) — 山东大学机器人工程本科生，专注于基于 sEMG 的机器学习步态分析；2026 年秋季将入学美国西北大学计算机工程硕士项目。">
+    <meta name="description" content="孙佑平 (Youping Sun) — 美国西北大学计算机工程硕士在读，本科毕业于山东大学机器人工程专业，专注于基于 sEMG 的机器学习步态分析。">
     <meta name="author" content="孙佑平 (Sun Youping, Youping Sun)">
     <meta name="keywords" content="孙佑平, Sun Youping, Youping Sun, 机器人工程, 机器学习, sEMG, 步态分析, 神经网络, 西北大学, 山东大学, 威斯康星大学麦迪逊分校, 计算机工程">
     <link rel="canonical" href="https://youpingsun.me/zh.html">
@@ -24,7 +24,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="孙佑平 | 机器人工程师 &amp; 机器学习研究者">
-    <meta property="og:description" content="山东大学机器人工程本科生，专注于基于 sEMG 的机器学习步态分析；2026 秋季入学美国西北大学计算机工程硕士项目。">
+    <meta property="og:description" content="美国西北大学计算机工程硕士在读，本科毕业于山东大学机器人工程专业，专注于基于 sEMG 的机器学习步态分析。">
     <meta property="og:image" content="myPhoto.jpeg">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:locale:alternate" content="en_US">
@@ -34,7 +34,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="孙佑平 | 机器人工程师 &amp; 机器学习研究者">
-    <meta name="twitter:description" content="机器人工程师与机器学习研究者。2026 秋季入学美国西北大学。">
+    <meta name="twitter:description" content="机器人工程师与机器学习研究者。美国西北大学计算机工程硕士在读。">
     <meta name="twitter:image" content="myPhoto.jpeg">
 
     <!-- Structured Data: Person schema, helps Google understand this is a personal page -->
@@ -45,7 +45,7 @@
       "name": "Youping Sun",
       "alternateName": ["Sun Youping", "孙佑平"],
       "jobTitle": "Robotics Engineer & ML Researcher",
-      "email": "mailto:sunuping1@gmail.com",
+      "email": "mailto:sunuping2@gmail.com",
       "image": "myPhoto.jpeg",
       "alumniOf": [
         { "@type": "CollegeOrUniversity", "name": "Shandong University", "url": "https://www.sdu.edu.cn" },
@@ -686,6 +686,12 @@
             .award-list li { flex-direction: column; gap: 0.1rem; }
         }
 
+        /* Phones: avatar + details side by side no longer fit, so stack them */
+        @media (max-width: 540px) {
+            .profile-col { flex-direction: column; align-items: center; text-align: center; gap: 0; }
+            .profile-links { align-items: center; }
+        }
+
         @media (max-width: 420px) { .nav-links { display: none; } }
     </style>
 </head>
@@ -720,13 +726,13 @@
                 <div>
                     <div class="profile-name">孙佑平</div>
                     <div class="profile-sub">Youping Sun</div>
-                    <div class="profile-sub">机器人工程</div>
-                    <div class="profile-sub">山东大学</div>
+                    <div class="profile-sub">计算机工程硕士</div>
+                    <div class="profile-sub">美国西北大学</div>
                     <ul class="profile-links">
                         <li>
-                            <a href="mailto:sunuping1@gmail.com">
+                            <a href="mailto:sunuping2@gmail.com">
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                sunuping1@gmail.com
+                                sunuping2@gmail.com
                             </a>
                         </li>
                         <li>
@@ -737,7 +743,7 @@
                         </li>
                     </ul>
 
-                    <a href="Youping_Sun_Resume_ZH.pdf" class="cv-download" target="_blank" download>
+                    <a href="Youping_Sun_CV.pdf" class="cv-download" target="_blank" download>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         下载简历
                     </a>

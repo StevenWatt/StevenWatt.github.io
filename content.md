@@ -1,6 +1,6 @@
 # About
 
-I am a final-year undergraduate in **Robotics Engineering** at [Shandong University](https://www.sdu.edu.cn), College of Control Science and Engineering, passionate about the intersection of machine learning, control systems, and human–robot interaction. In September 2026, I will begin my **MS in Computer Engineering** at [Northwestern University](https://www.northwestern.edu).
+I am an **MS student in Computer Engineering** at [Northwestern University](https://www.northwestern.edu), which I began in September 2026. I received my bachelor's degree in **Robotics Engineering** from [Shandong University](https://www.sdu.edu.cn), College of Control Science and Engineering, in June 2026. I am passionate about the intersection of machine learning, control systems, and human–robot interaction.
 
 My research focuses on machine learning-based human gait analysis — specifically, detecting and predicting gait phases from surface electromyography (sEMG) signals using artificial neural networks. I have published three papers at international conferences and received national and provincial awards in robotics competitions.
 
@@ -11,7 +11,6 @@ I spent Fall 2025 as an exchange student at the [University of Wisconsin–Madis
 ## Northwestern University
 Degree: MS Computer Engineering · Evanston, IL
 Period: Sep 2026 – May 2028 (Expected)
-Note: Graduate Admit
 
 ## University of Wisconsin–Madison
 Degree: Exchange Student · Industrial & Systems Engineering · Madison, WI
@@ -20,13 +19,13 @@ Note: GPA 4.0 / 4.0
 
 ## Shandong University
 Degree: BS Robotics Engineering · College of Control Science and Engineering · Jinan, China
-Period: Sep 2022 – Jun 2026 (Expected)
-Note: GPA 83.99 / 100
+Period: Sep 2022 – Jun 2026
+Note: GPA 84.74 / 100
 
 # Research Experience
 
 ## Robotics Center, Shandong University
-Period: Oct 2024 – Present
+Period: Oct 2024 – Sep 2026
 Role: Research Assistant
 Advisor: Prof. Zhang Huanghe (张黄河)
 Topic: Gait Phase Detection & Prediction with Machine Learning on sEMG Signals
@@ -44,6 +43,7 @@ Topic: EHD Printing — 3D Model Building, Scanning & Pattern Projection
 
 # News
 
+- [Sep 2026] Started my **MS in Computer Engineering** at Northwestern University.
 - [Apr 2026] Our paper "Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction" has been accepted to **ICCA 2026**.
 - [2026] Paper "Cross-Locomotion Task Generalization in sEMG-Based Gait Phase Prediction Using ANNs" accepted to **AIACT 2026**.
 - [Nov 2025] Our team received the **National 2nd Prize** at the 19th "Challenge Cup" AI+ Special Competition.
@@ -130,7 +130,6 @@ English (TOEFL 99), Chinese (Native)
 
 # Contact
 
-Email: sunuping1@gmail.com
-Phone: +86 185 6192 9927
-Location: College of Control Science and Engineering, Shandong University, Jinan, China
-Incoming: Northwestern University, Evanston, IL (Sep 2026)
+Email: sunuping2@gmail.com
+Phone: +1 608-867-3225
+Location: Northwestern University, Evanston, IL, USA

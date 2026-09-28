@@ -1,6 +1,6 @@
 # About
 
-本人是[山东大学](https://www.sdu.edu.cn)控制科学与工程学院**机器人工程**专业的大四本科生，对机器学习、控制系统与人机交互的交叉领域充满热情。2026 年 9 月，我将赴[美国西北大学](https://www.northwestern.edu)攻读**计算机工程硕士学位**。
+本人现为[美国西北大学](https://www.northwestern.edu)**计算机工程**专业硕士研究生（2026 年 9 月入学），本科毕业于[山东大学](https://www.sdu.edu.cn)控制科学与工程学院**机器人工程**专业，对机器学习、控制系统与人机交互的交叉领域充满热情。
 
 我的研究聚焦于基于机器学习的人体步态分析 —— 利用人工神经网络从表面肌电（sEMG）信号中检测并预测步态相位。截至目前，我已在国际会议上发表三篇论文，并获得多项全国级与省级机器人竞赛奖项。
 
@@ -11,7 +11,6 @@
 ## 美国西北大学（Northwestern University）
 Degree: 计算机工程硕士 · 伊利诺伊州埃文斯顿
 Period: 2026.09 – 2028.05（预计）
-Note: 已录取
 
 ## 威斯康星大学麦迪逊分校（UW–Madison）
 Degree: 交换学生 · 工业与系统工程
@@ -20,13 +19,13 @@ Note: GPA 4.0 / 4.0
 
 ## 山东大学
 Degree: 机器人工程学士 · 控制科学与工程学院
-Period: 2022.09 – 2026.06（预计）
-Note: GPA 83.99 / 100
+Period: 2022.09 – 2026.06
+Note: GPA 84.74 / 100
 
 # Research Experience
 
 ## 山东大学机器人中心
-Period: 2024.10 – 至今
+Period: 2024.10 – 2026.09
 Role: 科研助理
 Advisor: 张黄河 教授
 Topic: 基于机器学习的 sEMG 信号步态相位检测与预测
@@ -44,6 +43,7 @@ Topic: EHD 打印的三维建模、扫描与图案投影
 
 # News
 
+- [2026.09] 开始在美国西北大学攻读**计算机工程硕士学位**。
 - [2026.04] 论文《Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction》被 **ICCA 2026** 接收。
 - [2026] 论文《Cross-Locomotion Task Generalization in sEMG-Based Gait Phase Prediction Using ANNs》被 **AIACT 2026** 接收。
 - [2025.11] 我们团队获得第十九届"挑战杯"AI+ 专项赛 **全国二等奖**。
@@ -130,7 +130,6 @@ ROS, OpenCV, Webots, Docker, SolidWorks, Blender, Tableau
 
 # Contact
 
-Email: sunuping1@gmail.com
-Phone: +86 185 6192 9927
-Location: 山东大学控制科学与工程学院，济南，中国
-Incoming: 美国西北大学，伊利诺伊州埃文斯顿（2026.09）
+Email: sunuping2@gmail.com
+Phone: +1 608-867-3225
+Location: 美国西北大学，伊利诺伊州埃文斯顿

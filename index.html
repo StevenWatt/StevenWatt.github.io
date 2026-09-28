@@ -6,7 +6,7 @@
     <title>Youping Sun (孙佑平) | Robotics Engineer &amp; ML Researcher</title>
 
     <!-- 基础 SEO -->
-    <meta name="description" content="Youping Sun (孙佑平) — Robotics Engineering undergraduate at Shandong University, ML researcher on sEMG-based gait analysis. Incoming MS in Computer Engineering at Northwestern University (Sep 2026).">
+    <meta name="description" content="Youping Sun (孙佑平) — MS student in Computer Engineering at Northwestern University and ML researcher on sEMG-based gait analysis. Bachelor's in Robotics Engineering from Shandong University.">
     <meta name="author" content="Youping Sun (Sun Youping, 孙佑平)">
     <meta name="keywords" content="Youping Sun, Sun Youping, 孙佑平, Robotics Engineer, Machine Learning Researcher, sEMG, Gait Analysis, Neural Networks, Northwestern University, Shandong University, University of Wisconsin-Madison, Computer Engineering">
     <link rel="canonical" href="https://youpingsun.me/">
@@ -24,7 +24,7 @@
     <!-- Open Graph (Facebook, LinkedIn, WeChat etc.) -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Youping Sun | Robotics Engineer &amp; ML Researcher">
-    <meta property="og:description" content="Robotics Engineering undergraduate at Shandong University, ML researcher on sEMG-based gait analysis. Incoming MS at Northwestern University.">
+    <meta property="og:description" content="MS student in Computer Engineering at Northwestern University, ML researcher on sEMG-based gait analysis.">
     <meta property="og:image" content="myPhoto.jpeg">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="zh_CN">
@@ -34,7 +34,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Youping Sun | Robotics Engineer &amp; ML Researcher">
-    <meta name="twitter:description" content="Robotics &amp; ML researcher. Incoming MS at Northwestern University.">
+    <meta name="twitter:description" content="Robotics &amp; ML researcher. MS student at Northwestern University.">
     <meta name="twitter:image" content="myPhoto.jpeg">
 
     <!-- Structured Data: Person schema, helps Google understand this is a personal page -->
@@ -45,7 +45,7 @@
       "name": "Youping Sun",
       "alternateName": ["Sun Youping", "孙佑平"],
       "jobTitle": "Robotics Engineer & ML Researcher",
-      "email": "mailto:sunuping1@gmail.com",
+      "email": "mailto:sunuping2@gmail.com",
       "image": "myPhoto.jpeg",
       "alumniOf": [
         { "@type": "CollegeOrUniversity", "name": "Shandong University", "url": "https://www.sdu.edu.cn" },
@@ -686,6 +686,12 @@
             .award-list li { flex-direction: column; gap: 0.1rem; }
         }
 
+        /* Phones: avatar + details side by side no longer fit, so stack them */
+        @media (max-width: 540px) {
+            .profile-col { flex-direction: column; align-items: center; text-align: center; gap: 0; }
+            .profile-links { align-items: center; }
+        }
+
         @media (max-width: 420px) { .nav-links { display: none; } }
     </style>
 </head>
@@ -720,13 +726,13 @@
                 <div>
                     <div class="profile-name">Youping Sun</div>
                     <div class="profile-sub">孙佑平</div>
-                    <div class="profile-sub">Robotics Engineering</div>
-                    <div class="profile-sub">Shandong University</div>
+                    <div class="profile-sub">MS Computer Engineering</div>
+                    <div class="profile-sub">Northwestern University</div>
                     <ul class="profile-links">
                         <li>
-                            <a href="mailto:sunuping1@gmail.com">
+                            <a href="mailto:sunuping2@gmail.com">
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                sunuping1@gmail.com
+                                sunuping2@gmail.com
                             </a>
                         </li>
                         <li>
@@ -737,14 +743,14 @@
                         </li>
                     </ul>
 
-                    <a href="Youping_Sun_Resume_EN.pdf" class="cv-download" target="_blank" download>
+                    <a href="Youping_Sun_CV.pdf" class="cv-download" target="_blank" download>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         Download CV
                     </a>
                 </div>
             </div>
             <div class="bio-col">
-                <p>I am a final-year undergraduate in <strong>Robotics Engineering</strong> at <a href="https://www.sdu.edu.cn" target="_blank" rel="noopener">Shandong University</a>, College of Control Science and Engineering, passionate about the intersection of machine learning, control systems, and human–robot interaction. In September 2026, I will begin my <strong>MS in Computer Engineering</strong> at <a href="https://www.northwestern.edu" target="_blank" rel="noopener">Northwestern University</a>.</p>
+                <p>I am an <strong>MS student in Computer Engineering</strong> at <a href="https://www.northwestern.edu" target="_blank" rel="noopener">Northwestern University</a>, which I began in September 2026. I received my bachelor&#x27;s degree in <strong>Robotics Engineering</strong> from <a href="https://www.sdu.edu.cn" target="_blank" rel="noopener">Shandong University</a>, College of Control Science and Engineering, in June 2026. I am passionate about the intersection of machine learning, control systems, and human–robot interaction.</p>
                 <p>My research focuses on machine learning-based human gait analysis — specifically, detecting and predicting gait phases from surface electromyography (sEMG) signals using artificial neural networks. I have published three papers at international conferences and received national and provincial awards in robotics competitions.</p>
                 <p>I spent Fall 2025 as an exchange student at the <a href="https://www.wisc.edu" target="_blank" rel="noopener">University of Wisconsin–Madison</a> (GPA: 4.0 / 4.0), where I worked in the Flexible Electronics &amp; Additive Printing Lab on electrohydrodynamic (EHD) printing.</p>
 
@@ -763,7 +769,7 @@
                 <div class="tl-date">Sep 2026 – May 2028 (Expected)</div>
                 <div class="tl-title">Northwestern University</div>
                 <div class="tl-sub">MS Computer Engineering · Evanston, IL</div>
-                <span class="badge">Graduate Admit</span>
+                
             </div>
             <div class="tl-item">
                 <div class="tl-date">Sep 2025 – Dec 2025</div>
@@ -772,10 +778,10 @@
                 <span class="badge">GPA 4.0 / 4.0</span>
             </div>
             <div class="tl-item">
-                <div class="tl-date">Sep 2022 – Jun 2026 (Expected)</div>
+                <div class="tl-date">Sep 2022 – Jun 2026</div>
                 <div class="tl-title">Shandong University</div>
                 <div class="tl-sub">BS Robotics Engineering · College of Control Science and Engineering · Jinan, China</div>
-                <span class="badge">GPA 83.99 / 100</span>
+                <span class="badge">GPA 84.74 / 100</span>
             </div>
 
         </div>
@@ -789,7 +795,7 @@
         </h2>
         <div class="tl-wrap">
             <div class="tl-item">
-                <div class="tl-date">Oct 2024 – Present</div>
+                <div class="tl-date">Oct 2024 – Sep 2026</div>
                 <div class="tl-title">Robotics Center, Shandong University</div>
                 <div class="tl-sub">Research Assistant · Prof. Zhang Huanghe (张黄河)</div>
                 <div class="research-topic">Gait Phase Detection &amp; Prediction with Machine Learning on sEMG Signals</div>
@@ -813,6 +819,7 @@
             News
         </h2>
         <ul class="news-list">
+            <li><span class="news-tag">[Sep 2026]</span> Started my <strong>MS in Computer Engineering</strong> at Northwestern University.</li>
             <li><span class="news-tag">[Apr 2026]</span> Our paper &quot;Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction&quot; has been accepted to <strong>ICCA 2026</strong>.</li>
             <li><span class="news-tag">[2026]</span> Paper &quot;Cross-Locomotion Task Generalization in sEMG-Based Gait Phase Prediction Using ANNs&quot; accepted to <strong>AIACT 2026</strong>.</li>
             <li><span class="news-tag">[Nov 2025]</span> Our team received the <strong>National 2nd Prize</strong> at the 19th &quot;Challenge Cup&quot; AI+ Special Competition.</li>
@@ -903,10 +910,9 @@
             Contact
         </h2>
         <div class="contact-block">
-            <div class="contact-row"><span class="contact-icon">✉</span><a href="mailto:sunuping1@gmail.com">sunuping1@gmail.com</a></div>
-            <div class="contact-row"><span class="contact-icon">📞</span><span>+86 185 6192 9927</span></div>
-            <div class="contact-row"><span class="contact-icon">📍</span><span>College of Control Science and Engineering, Shandong University, Jinan, China</span></div>
-            <div class="contact-row"><span class="contact-icon">📍</span><span>Northwestern University, Evanston, IL (Sep 2026)</span></div>
+            <div class="contact-row"><span class="contact-icon">✉</span><a href="mailto:sunuping2@gmail.com">sunuping2@gmail.com</a></div>
+            <div class="contact-row"><span class="contact-icon">📞</span><span>+1 608-867-3225</span></div>
+            <div class="contact-row"><span class="contact-icon">📍</span><span>Northwestern University, Evanston, IL, USA</span></div>
         </div>
     </section>
 

@@ -6,7 +6,7 @@
     <title>孙佑平 (Youping Sun) | 机器人工程师 &amp; 机器学习研究者</title>
 
     <!-- 基础 SEO -->
-    <meta name="description" content="孙佑平 (Youping Sun) — 山东大学机器人工程本科生，专注于基于 sEMG 的机器学习步态分析；2026 年秋季将入学美国西北大学计算机工程硕士项目。">
+    <meta name="description" content="孙佑平 (Youping Sun) — 美国西北大学计算机工程硕士在读，本科毕业于山东大学机器人工程专业，专注于基于 sEMG 的机器学习步态分析。">
     <meta name="author" content="孙佑平 (Sun Youping, Youping Sun)">
     <meta name="keywords" content="孙佑平, Sun Youping, Youping Sun, 机器人工程, 机器学习, sEMG, 步态分析, 神经网络, 西北大学, 山东大学, 威斯康星大学麦迪逊分校, 计算机工程">
     <link rel="canonical" href="https://youpingsun.me/zh.html">
@@ -24,7 +24,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="孙佑平 | 机器人工程师 &amp; 机器学习研究者">
-    <meta property="og:description" content="山东大学机器人工程本科生，专注于基于 sEMG 的机器学习步态分析；2026 秋季入学美国西北大学计算机工程硕士项目。">
+    <meta property="og:description" content="美国西北大学计算机工程硕士在读，本科毕业于山东大学机器人工程专业，专注于基于 sEMG 的机器学习步态分析。">
     <meta property="og:image" content="myPhoto.jpeg">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:locale:alternate" content="en_US">
@@ -34,7 +34,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="孙佑平 | 机器人工程师 &amp; 机器学习研究者">
-    <meta name="twitter:description" content="机器人工程师与机器学习研究者。2026 秋季入学美国西北大学。">
+    <meta name="twitter:description" content="机器人工程师与机器学习研究者。美国西北大学计算机工程硕士在读。">
     <meta name="twitter:image" content="myPhoto.jpeg">
 
     <!-- Structured Data: Person schema, helps Google understand this is a personal page -->
@@ -45,7 +45,7 @@
       "name": "Youping Sun",
       "alternateName": ["Sun Youping", "孙佑平"],
       "jobTitle": "Robotics Engineer & ML Researcher",
-      "email": "mailto:sunuping1@gmail.com",
+      "email": "mailto:sunuping2@gmail.com",
       "image": "myPhoto.jpeg",
       "alumniOf": [
         { "@type": "CollegeOrUniversity", "name": "Shandong University", "url": "https://www.sdu.edu.cn" },
@@ -686,6 +686,12 @@
             .award-list li { flex-direction: column; gap: 0.1rem; }
         }
 
+        /* Phones: avatar + details side by side no longer fit, so stack them */
+        @media (max-width: 540px) {
+            .profile-col { flex-direction: column; align-items: center; text-align: center; gap: 0; }
+            .profile-links { align-items: center; }
+        }
+
         @media (max-width: 420px) { .nav-links { display: none; } }
     </style>
 </head>
@@ -720,13 +726,13 @@
                 <div>
                     <div class="profile-name">孙佑平</div>
                     <div class="profile-sub">Youping Sun</div>
-                    <div class="profile-sub">机器人工程</div>
-                    <div class="profile-sub">山东大学</div>
+                    <div class="profile-sub">计算机工程硕士</div>
+                    <div class="profile-sub">美国西北大学</div>
                     <ul class="profile-links">
                         <li>
-                            <a href="mailto:sunuping1@gmail.com">
+                            <a href="mailto:sunuping2@gmail.com">
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                sunuping1@gmail.com
+                                sunuping2@gmail.com
                             </a>
                         </li>
                         <li>
@@ -737,14 +743,14 @@
                         </li>
                     </ul>
 
-                    <a href="Youping_Sun_Resume_ZH.pdf" class="cv-download" target="_blank" download>
+                    <a href="Youping_Sun_CV.pdf" class="cv-download" target="_blank" download>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         下载简历
                     </a>
                 </div>
             </div>
             <div class="bio-col">
-                <p>本人是<a href="https://www.sdu.edu.cn" target="_blank" rel="noopener">山东大学</a>控制科学与工程学院<strong>机器人工程</strong>专业的大四本科生，对机器学习、控制系统与人机交互的交叉领域充满热情。2026 年 9 月，我将赴<a href="https://www.northwestern.edu" target="_blank" rel="noopener">美国西北大学</a>攻读<strong>计算机工程硕士学位</strong>。</p>
+                <p>本人现为<a href="https://www.northwestern.edu" target="_blank" rel="noopener">美国西北大学</a><strong>计算机工程</strong>专业硕士研究生（2026 年 9 月入学），本科毕业于<a href="https://www.sdu.edu.cn" target="_blank" rel="noopener">山东大学</a>控制科学与工程学院<strong>机器人工程</strong>专业，对机器学习、控制系统与人机交互的交叉领域充满热情。</p>
                 <p>我的研究聚焦于基于机器学习的人体步态分析 —— 利用人工神经网络从表面肌电（sEMG）信号中检测并预测步态相位。截至目前，我已在国际会议上发表三篇论文，并获得多项全国级与省级机器人竞赛奖项。</p>
                 <p>2025 年秋季，我在<a href="https://www.wisc.edu" target="_blank" rel="noopener">威斯康星大学麦迪逊分校</a>作为交换学生（GPA 4.0 / 4.0），在柔性电子与增材打印实验室从事 EHD 打印相关研究。</p>
 
@@ -763,7 +769,7 @@
                 <div class="tl-date">2026.09 – 2028.05（预计）</div>
                 <div class="tl-title">美国西北大学（Northwestern University）</div>
                 <div class="tl-sub">计算机工程硕士 · 伊利诺伊州埃文斯顿</div>
-                <span class="badge">已录取</span>
+                
             </div>
             <div class="tl-item">
                 <div class="tl-date">2025.09 – 2025.12</div>
@@ -772,10 +778,10 @@
                 <span class="badge">GPA 4.0 / 4.0</span>
             </div>
             <div class="tl-item">
-                <div class="tl-date">2022.09 – 2026.06（预计）</div>
+                <div class="tl-date">2022.09 – 2026.06</div>
                 <div class="tl-title">山东大学</div>
                 <div class="tl-sub">机器人工程学士 · 控制科学与工程学院</div>
-                <span class="badge">GPA 83.99 / 100</span>
+                <span class="badge">GPA 84.74 / 100</span>
             </div>
 
         </div>
@@ -789,7 +795,7 @@
         </h2>
         <div class="tl-wrap">
             <div class="tl-item">
-                <div class="tl-date">2024.10 – 至今</div>
+                <div class="tl-date">2024.10 – 2026.09</div>
                 <div class="tl-title">山东大学机器人中心</div>
                 <div class="tl-sub">科研助理 · 张黄河 教授</div>
                 <div class="research-topic">基于机器学习的 sEMG 信号步态相位检测与预测</div>
@@ -813,6 +819,7 @@
             最新动态
         </h2>
         <ul class="news-list">
+            <li><span class="news-tag">[2026.09]</span> 开始在美国西北大学攻读<strong>计算机工程硕士学位</strong>。</li>
             <li><span class="news-tag">[2026.04]</span> 论文《Exploring the Correlation Between Level Walking and Stair Ambulation for Fine-Grained Gait Phase Prediction》被 <strong>ICCA 2026</strong> 接收。</li>
             <li><span class="news-tag">[2026]</span> 论文《Cross-Locomotion Task Generalization in sEMG-Based Gait Phase Prediction Using ANNs》被 <strong>AIACT 2026</strong> 接收。</li>
             <li><span class="news-tag">[2025.11]</span> 我们团队获得第十九届&quot;挑战杯&quot;AI+ 专项赛 <strong>全国二等奖</strong>。</li>
@@ -903,10 +910,9 @@
             联系方式
         </h2>
         <div class="contact-block">
-            <div class="contact-row"><span class="contact-icon">✉</span><a href="mailto:sunuping1@gmail.com">sunuping1@gmail.com</a></div>
-            <div class="contact-row"><span class="contact-icon">📞</span><span>+86 185 6192 9927</span></div>
-            <div class="contact-row"><span class="contact-icon">📍</span><span>山东大学控制科学与工程学院，济南，中国</span></div>
-            <div class="contact-row"><span class="contact-icon">📍</span><span>美国西北大学，伊利诺伊州埃文斯顿（2026.09）</span></div>
+            <div class="contact-row"><span class="contact-icon">✉</span><a href="mailto:sunuping2@gmail.com">sunuping2@gmail.com</a></div>
+            <div class="contact-row"><span class="contact-icon">📞</span><span>+1 608-867-3225</span></div>
+            <div class="contact-row"><span class="contact-icon">📍</span><span>美国西北大学，伊利诺伊州埃文斯顿</span></div>
         </div>
     </section>
 

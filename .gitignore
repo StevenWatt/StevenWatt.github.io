@@ -7,7 +7,9 @@
 # Raw resume source files (not needed for the public site)
 山东大学*.docx
 山东大学*.pdf
-# The public CVs Youping_Sun_Resume_EN.pdf / _ZH.pdf are tracked normally
+CV_SYP.*
+myCV_SYP.*
+# The public CV Youping_Sun_CV.pdf (copy of CV_SYP.pdf) is tracked normally
 
 # Python
 __pycache__/
