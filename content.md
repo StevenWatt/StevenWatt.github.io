@@ -106,7 +106,7 @@ Description: Developed OpenCV-based track recognition with curve-type classifica
 - Provincial 1st Prize — 19th National Intelligent Vehicle Competition (iFLYTEK Track) | 2024
 - Outstanding Innovation & Entrepreneurship Individual, Shandong University | 2023
 - Entrepreneurship Practice Scholarship, Shandong University | 2023
-- Advanced Individual in Social Practice, Shandong University | 2022
+- Advanced Individual in Social Practice, Shandong University | 2023
 
 # Skills
 
