@@ -125,9 +125,6 @@ ROS, OpenCV, Webots, Docker, SolidWorks, Blender, Tableau
 ## 数学
 高等数学, 线性代数, 概率与统计, 复变函数
 
-## 语言
-英语（托福 99）, 中文（母语）
-
 # Contact
 
 Email: sunuping2@gmail.com

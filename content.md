@@ -125,9 +125,6 @@ ROS, OpenCV, Webots, Docker, SolidWorks, Blender, Tableau
 ## Mathematics
 Advanced Calculus, Linear Algebra, Probability & Statistics, Complex Analysis
 
-## Languages
-English (TOEFL 99), Chinese (Native)
-
 # Contact
 
 Email: sunuping2@gmail.com
