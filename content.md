@@ -114,7 +114,7 @@ Description: Developed OpenCV-based track recognition with curve-type classifica
 Python, C/C++, R, MATLAB, Wolfram
 
 ## Machine Learning & Signal Processing
-ANN, CNN, SVM, KNN, sEMG signal processing & feature extraction
+PyTorch, ANN, CNN, SVM, KNN, sEMG signal processing & feature extraction
 
 ## Tools & Frameworks
 ROS, OpenCV, Webots, Docker, SolidWorks, Blender, COMSOL Multiphysics, Tableau
