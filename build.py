@@ -486,8 +486,9 @@ def build_one(content_path, template_path, output_path):
 def build():
     # 英文版（默认）
     build_one('content.md', 'template.html', 'index.html')
-    # 中文版
-    build_one('content-zh.md', 'template-zh.html', 'zh.html')
+    # 中文版暂时下线（zh.html 现在只是跳转回首页的页面）。
+    # 恢复时：取消下面一行的注释，并在 template.html 里加回语言切换按钮和 hreflang。
+    # build_one('content-zh.md', 'template-zh.html', 'zh.html')
 
 
 if __name__ == '__main__':
