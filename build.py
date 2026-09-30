@@ -21,6 +21,13 @@ import re, html as hl
 from datetime import date
 from pathlib import Path
 
+# ─── 设置 ─────────────────────────────────────────────────────────────────────
+
+# 侧栏 "Download CV" 按钮指向的 PDF。留空 '' 则不显示按钮。
+# 重新开放时：把 PDF 放进项目根目录，填上文件名，例如 'Youping_Sun_CV.pdf'。
+CV_FILE = ''
+
+
 # ─── 工具函数 ─────────────────────────────────────────────────────────────────
 
 def read(path):  return Path(path).read_text(encoding='utf-8')
@@ -484,6 +491,15 @@ def h_skills(groups):
     return f'        <div class="skills-grid">\n{divs}        </div>'
 
 
+def h_cv_button(path):
+    if not path:
+        return ''
+    return (f'                    <a href="{esc(path)}" class="cv-download" target="_blank" download>\n'
+            f'                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>\n'
+            f'                        Download CV\n'
+            f'                    </a>\n')
+
+
 def h_contact(fields):
     rows = ''
     order = [
@@ -527,6 +543,7 @@ def build_one(content_path, template_path, output_path):
         '{{ACTIVITIES}}':   h_activities(parse_activities(get('Student Activities'))),
         '{{SKILLS}}':       h_skills(parse_skills(get('Skills'))),
         '{{CONTACT}}':      h_contact(parse_contact(get('Contact'))),
+        '{{CV_BUTTON}}':    h_cv_button(CV_FILE),
         '{{UPDATED}}':      f'{date.today():%b} {date.today().day}, {date.today().year}',
     }
 

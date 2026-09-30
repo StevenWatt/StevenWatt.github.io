@@ -9,7 +9,7 @@
 山东大学*.pdf
 CV_SYP.*
 myCV_SYP.*
-# The public CV Youping_Sun_CV.pdf (copy of CV_SYP.pdf) is tracked normally
+# The public CV is offline for now; when it returns, publish it as Youping_Sun_CV.pdf and set CV_FILE in build.py
 
 # Python
 __pycache__/
